@@ -82,12 +82,8 @@ Make a new 'sensor' .yaml file with this code:
 - platform: template
   sensors:
     last_alexa:
-      entity_id:
-        - media_player.desk_dot  # Add your Devices here
-        - media_player.bedroom_dot
-        - media_player.this_device
       value_template: >
-        {{ states.media_player | selectattr('attributes.last_called','eq',True) | map(attribute='entity_id') | first }}
+        {{ states.media_player | selectattr('attributes.last_called','eq',true) | map(attribute='entity_id') | first }}
 ```
 
 🎁 Found this useful or want to say 'thanks' and support my efforts...
