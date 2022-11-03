@@ -86,6 +86,7 @@ Make a new 'sensor' .yaml file with this code:
         {{ states.media_player | selectattr('attributes.last_called','eq',true) | map(attribute='entity_id') | first }}
 ```
 
+___
 #### 💖 Found this useful, want to say '*Thanks*' and support my efforts. *CHEERS*🍺
 | Buy me a Coffee | PATREON |
 |-----------------|---------|
